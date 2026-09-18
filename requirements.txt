@@ -1,7 +1,13 @@
-streamlit==1.64.0
+# Exact pins, because these two decide the numbers. The same seeded
+# configuration scores 0.8941 on scikit-learn 1.9.1 and 0.8750 on 1.6.1, and
+# rf_eight_best.joblib was pickled by the version below.
 scikit-learn==1.9.1
 optuna==5.0.0
-pandas==2.2.3
-numpy==2.0.2
-joblib==1.6.0
-plotly==7.1.0
+
+# Floors only. These do not change the results, and pinning them exactly breaks
+# on Python versions that have no wheels for the older releases.
+streamlit>=1.40
+pandas>=2.2
+numpy>=1.24
+joblib>=1.4
+plotly>=5.24

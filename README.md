@@ -10,11 +10,18 @@ in a specific, fixable way.
 ## Setup
 
 ```bash
-git clone <this repo>
+git clone https://github.com/pulkit-scaler/eight-detector-app.git
 cd eight-detector-app
 python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
+
+Python 3.10 or newer. Tested on 3.12 and 3.14.
+
+`scikit-learn` and `optuna` are pinned exactly because they decide the numbers,
+and because `rf_eight_best.joblib` was pickled by that scikit-learn. Everything
+else has a floor rather than an exact pin, so pip can pick versions that have
+wheels for your Python instead of trying to compile numpy from source.
 
 ## Run the app
 
