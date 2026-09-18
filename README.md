@@ -70,8 +70,8 @@ streamlit run snippets/01_hello.py
 | `03_sidebar.py` | The sidebar as a second channel |
 | `04_widgets.py` | Widgets return values |
 | `05_button_chart.py` | Buttons are true for one rerun |
-| `06_cache_hit.py` | A cache key that stays put |
-| `07_cache_miss.py` | A cache key that changes every call |
+| `06_cache_hit.py` | A stable cache key, so the number never changes |
+| `07_cache_miss.py` | A key that changes every call, so it always recomputes |
 | `08_session_state.py` | State that survives a rerun |
 
 ## Deploying
